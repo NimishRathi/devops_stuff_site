@@ -658,7 +658,7 @@
           <h2>Complete DevOps roadmap</h2>
           <p class="section-note" style="margin-top:8px;">The path from "never touched a terminal" to shipping infrastructure — in order.</p>
         </div>
-        <a class="btn btn-primary" href="roadmap/devops-complete-roadmap.pdf" target="_blank" rel="noopener">Download full roadmap (PDF)</a>
+        <a class="btn btn-primary" href="roadmap/devops-complete-roadmap.pdf" download rel="noopener">Download full roadmap (PDF)</a>
       </div>
 
       <div class="roadmap-track">
@@ -884,83 +884,8 @@ video,Docker,Bind mounts vs volumes,https://instagram.com/devops_stuff`;
     sheetCards.innerHTML = topics.map(topic => {
       const sheet = cheatsheets[topic];
       const action = sheet.url
-        ? `<a class="btn btn-primary" href="${escapeHtml(sheet.url)}" target="_blank" rel="noopener">Download PDF</a>`
+        ? `<a class="btn btn-primary" href="${escapeHtml(sheet.url)}" download rel="noopener">Download PDF</a>`
         : `<span class="badge-soon">Coming soon</span>`;
       return `
         <div class="sheet-card${topic === activeSheetTab ? " active" : ""}" data-topic="${escapeHtml(topic)}">
           <h3>${escapeHtml(topic)} cheat sheet</h3>
-          <p>${escapeHtml(sheet.description)}</p>
-          ${action}
-        </div>
-      `;
-    }).join("");
-
-    tabRow.querySelectorAll(".tab-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        activeSheetTab = btn.dataset.topic;
-        renderCheatsheets();
-      });
-    });
-  }
-
-  /* ---------------- init ---------------- */
-  function initSite(){
-    renderCarousels();
-    renderFilters();
-    renderVideos("All");
-    renderCheatsheets();
-  }
-
-  function splitRows(rows){
-    carousels = [];
-    videos = [];
-    rows.forEach(row => {
-      const type = (row.type || "").trim().toLowerCase();
-      const entry = {
-        category: (row.category || "").trim(),
-        title: (row.title || "").trim(),
-        url: (row.url || "").trim()
-      };
-      if (!entry.title || !entry.url) return;
-      if (type === "carousel") carousels.push(entry);
-      else if (type === "video") videos.push(entry);
-    });
-  }
-
-  function loadFromCsv(csvText, sourceIsLive){
-    Papa.parse(csvText, {
-      header: true,
-      skipEmptyLines: true,
-      complete: function(results){
-        splitRows(results.data);
-        initSite();
-        setStatus(sourceIsLive ? "live" : "demo", sourceIsLive ? "live — pulling from the feed" : "demo data — no sheet connected");
-      }
-    });
-  }
-
-  function loadData(){
-    if (!SHEET_CSV_URL){
-      loadFromCsv(DEMO_CSV, false);
-      return;
-    }
-    fetch(SHEET_CSV_URL)
-      .then(res => {
-        if (!res.ok) throw new Error("Sheet fetch failed: " + res.status);
-        return res.text();
-      })
-      .then(text => loadFromCsv(text, true))
-      .catch(() => {
-        loadFromCsv(DEMO_CSV, false);
-        setStatus("error", "couldn't reach the sheet — showing demo data");
-      });
-  }
-
-  document.getElementById("year").textContent = "© " + new Date().getFullYear();
-
-  /* Kickoff — must run last, after every function/const/DOM ref above is defined. */
-  loadData();
-</script>
-
-</body>
-</html>

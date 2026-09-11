@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>devops_stuff — DevOps, Linux &amp; cloud, in your feed</title>
-<meta name="description" content="@devops_stuff — DevOps, Linux and cloud content by Nimish Rathi. Carousels, video breakdowns and cheat sheets.">
+<title>devops_stuff - DevOps, Linux and cloud, in your feed</title>
+<meta name="description" content="@devops_stuff - DevOps, Linux and cloud content by Nimish Rathi. Carousels, video breakdowns and cheat sheets.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +67,6 @@
     *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
   }
 
-  /* ---------- status banner ---------- */
   #statusBanner{
     display:flex;
     align-items:center;
@@ -94,7 +93,6 @@
   #statusBanner.error .dot{background:#E2725B; box-shadow:0 0 0 3px rgba(226,114,91,0.15);}
   #statusBanner.error{color:#E2725B;}
 
-  /* ---------- nav ---------- */
   header.site-nav{
     position:sticky;
     top:0;
@@ -173,7 +171,6 @@
     .nav-cta .btn-label-long{display:none;}
   }
 
-  /* ---------- hero ---------- */
   .hero{
     padding:72px 0 56px;
     border-bottom:1px solid var(--border);
@@ -264,7 +261,6 @@
   }
   @keyframes blink{ 50%{opacity:0;} }
 
-  /* ---------- section shell ---------- */
   section{padding:64px 0;}
   section.alt{background:var(--panel);}
   .section-head{
@@ -289,7 +285,6 @@
     max-width:40ch;
   }
 
-  /* ---------- carousels ---------- */
   .carousel-strip{
     display:flex;
     gap:16px;
@@ -348,7 +343,6 @@
     padding:20px;
   }
 
-  /* ---------- filters ---------- */
   .filter-row{
     display:flex;
     gap:10px;
@@ -397,7 +391,6 @@
   }
   .video-row .vtitle{font-size:14.5px; font-weight:500;}
 
-  /* ---------- cheat sheets ---------- */
   .tabs{
     display:flex;
     gap:8px;
@@ -441,7 +434,6 @@
     display:inline-block;
   }
 
-  /* ---------- roadmap ---------- */
   .roadmap-track{
     position:relative;
     max-width:720px;
@@ -528,7 +520,6 @@
     .roadmap-node{left:-44px; width:32px; height:32px; font-size:12px;}
   }
 
-  /* ---------- footer ---------- */
   footer{
     border-top:1px solid var(--border);
     padding:56px 0 40px;
@@ -560,7 +551,7 @@
 
 <div id="statusBanner" class="mono">
   <span class="dot"></span>
-  <span id="statusBannerText">checking feed…</span>
+  <span id="statusBannerText">checking feed...</span>
 </div>
 
 <header class="site-nav">
@@ -583,7 +574,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="hero-eyebrow mono">devops · linux · cloud, in under 60 seconds</span>
+        <span class="hero-eyebrow mono">devops - linux - cloud, in under 60 seconds</span>
         <h1>DevOps you can actually read on your phone.</h1>
         <span class="byline">by <strong>Nimish Rathi</strong></span>
         <p class="lead">Carousels, breakdowns and cheat sheets for the parts of Linux, Docker and Kubernetes that never made it into the docs. Run by Nimish Rathi, followed by ~1,800 people who'd rather scroll than skim a man page.</p>
@@ -602,7 +593,7 @@
           <div class="line"><span class="prompt-sym">$</span> <span class="cmd">whoami</span></div>
           <div class="line out">Nimish Rathi</div>
           <div class="line"><span class="prompt-sym">$</span> <span class="cmd">cat role.txt</span></div>
-          <div class="line out">Founder, <span class="hl">@devops_stuff</span> — DevOps &amp; Linux, explained simply</div>
+          <div class="line out">Founder, <span class="hl">@devops_stuff</span> - DevOps and Linux, explained simply</div>
           <div class="line"><span class="prompt-sym">$</span> <span class="cmd">./follow.sh</span><span class="cursor"></span></div>
         </div>
       </div>
@@ -618,7 +609,7 @@
         </div>
         <p class="section-note">The latest swipe-through posts, pulled straight from Instagram.</p>
       </div>
-      <div id="carouselStrip" class="carousel-strip"><!-- rendered by renderCarousels() --></div>
+      <div id="carouselStrip" class="carousel-strip"></div>
     </div>
   </section>
 
@@ -631,8 +622,8 @@
         </div>
         <p class="section-note">Short breakdowns, filed by topic. Filter by category to find one.</p>
       </div>
-      <div id="filterRow" class="filter-row"><!-- rendered by renderFilters() --></div>
-      <div id="videoList" class="video-list"><!-- rendered by renderVideos() --></div>
+      <div id="filterRow" class="filter-row"></div>
+      <div id="videoList" class="video-list"></div>
     </div>
   </section>
 
@@ -645,8 +636,8 @@
         </div>
         <p class="section-note">One-page PDFs for the commands you always forget.</p>
       </div>
-      <div id="tabRow" class="tabs"><!-- rendered by renderCheatsheets() --></div>
-      <div id="sheetCards"><!-- rendered by renderCheatsheets() --></div>
+      <div id="tabRow" class="tabs"></div>
+      <div id="sheetCards"></div>
     </div>
   </section>
 
@@ -656,7 +647,7 @@
         <div>
           <span class="section-tag mono">START TO END</span>
           <h2>Complete DevOps roadmap</h2>
-          <p class="section-note" style="margin-top:8px;">The path from "never touched a terminal" to shipping infrastructure — in order.</p>
+          <p class="section-note" style="margin-top:8px;">The path from "never touched a terminal" to shipping infrastructure - in order.</p>
         </div>
         <a class="btn btn-primary" href="roadmap/devops-complete-roadmap.pdf" download rel="noopener">Download full roadmap (PDF)</a>
       </div>
@@ -666,9 +657,9 @@
         <div class="roadmap-step">
           <div class="roadmap-node">1</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 01 &middot; FOUNDATIONS</span>
+            <span class="stage-label mono">STAGE 01 - FOUNDATIONS</span>
             <h3>Linux fundamentals</h3>
-            <p>The command line, file system, permissions and processes — everything else in DevOps is built on top of this.</p>
+            <p>The command line, file system, permissions and processes - everything else in DevOps is built on top of this.</p>
             <div class="skills"><span>Shell basics</span><span>File permissions</span><span>Process management</span></div>
           </div>
         </div>
@@ -676,9 +667,9 @@
         <div class="roadmap-step">
           <div class="roadmap-node">2</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 02 &middot; FOUNDATIONS</span>
+            <span class="stage-label mono">STAGE 02 - FOUNDATIONS</span>
             <h3>Networking basics</h3>
-            <p>DNS, HTTP, ports and firewalls — how machines actually talk to each other, which explains most "it's not connecting" bugs.</p>
+            <p>DNS, HTTP, ports and firewalls - how machines actually talk to each other, which explains most "it's not connecting" bugs.</p>
             <div class="skills"><span>DNS</span><span>TCP/IP</span><span>Firewalls</span></div>
           </div>
         </div>
@@ -686,9 +677,9 @@
         <div class="roadmap-step">
           <div class="roadmap-node">3</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 03 &middot; WORKFLOW</span>
+            <span class="stage-label mono">STAGE 03 - WORKFLOW</span>
             <h3>Version control with Git</h3>
-            <p>Branching, merging, pull requests — the shared language every team uses to move code without stepping on each other.</p>
+            <p>Branching, merging, pull requests - the shared language every team uses to move code without stepping on each other.</p>
             <div class="skills"><span>Git</span><span>Branching</span><span>Pull requests</span></div>
           </div>
         </div>
@@ -696,9 +687,9 @@
         <div class="roadmap-step">
           <div class="roadmap-node">4</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 04 &middot; WORKFLOW</span>
-            <h3>Scripting &amp; automation</h3>
-            <p>Bash and Python for the tasks you don't want to do by hand twice — the real starting point of "ops" work.</p>
+            <span class="stage-label mono">STAGE 04 - WORKFLOW</span>
+            <h3>Scripting and automation</h3>
+            <p>Bash and Python for the tasks you don't want to do by hand twice - the real starting point of "ops" work.</p>
             <div class="skills"><span>Bash</span><span>Python</span><span>Cron</span></div>
           </div>
         </div>
@@ -706,7 +697,7 @@
         <div class="roadmap-step milestone">
           <div class="roadmap-node">5</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 05 &middot; CORE DEVOPS</span>
+            <span class="stage-label mono">STAGE 05 - CORE DEVOPS</span>
             <h3>Containers with Docker</h3>
             <p>Packaging an app with everything it needs to run, so it behaves the same on your laptop and in production.</p>
             <div class="skills"><span>Docker</span><span>Images</span><span>Registries</span></div>
@@ -716,7 +707,7 @@
         <div class="roadmap-step milestone">
           <div class="roadmap-node">6</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 06 &middot; CORE DEVOPS</span>
+            <span class="stage-label mono">STAGE 06 - CORE DEVOPS</span>
             <h3>CI/CD pipelines</h3>
             <p>Automating build, test and deploy so shipping code is a routine event, not a stressful one.</p>
             <div class="skills"><span>GitHub Actions</span><span>Jenkins</span><span>Automated testing</span></div>
@@ -726,9 +717,9 @@
         <div class="roadmap-step milestone">
           <div class="roadmap-node">7</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 07 &middot; SCALE</span>
+            <span class="stage-label mono">STAGE 07 - SCALE</span>
             <h3>Orchestration with Kubernetes</h3>
-            <p>Running many containers reliably — scheduling, scaling and healing them without babysitting every one by hand.</p>
+            <p>Running many containers reliably - scheduling, scaling and healing them without babysitting every one by hand.</p>
             <div class="skills"><span>Pods</span><span>Deployments</span><span>Services</span></div>
           </div>
         </div>
@@ -736,9 +727,9 @@
         <div class="roadmap-step milestone">
           <div class="roadmap-node">8</div>
           <div class="roadmap-card">
-            <span class="stage-label mono">STAGE 08 &middot; SCALE</span>
-            <h3>Cloud &amp; infrastructure as code</h3>
-            <p>Provisioning real infrastructure on AWS, Azure or GCP — and describing it in code with Terraform instead of clicking around a console.</p>
+            <span class="stage-label mono">STAGE 08 - SCALE</span>
+            <h3>Cloud and infrastructure as code</h3>
+            <p>Provisioning real infrastructure on AWS, Azure or GCP - and describing it in code with Terraform instead of clicking around a console.</p>
             <div class="skills"><span>AWS/Azure/GCP</span><span>Terraform</span><span>Monitoring</span></div>
           </div>
         </div>
@@ -754,13 +745,13 @@
     <div class="footer-inner">
       <div class="footer-cta">
         <h2>More of this, daily, on Instagram.</h2>
-        <p>New carousels and videos drop through the week — nothing you need a build pipeline to read.</p>
-        <p class="mono" style="color:var(--muted); font-size:13px; margin-top:12px;">Written &amp; run by <strong style="color:var(--text);">Nimish Rathi</strong></p>
+        <p>New carousels and videos drop through the week - nothing you need a build pipeline to read.</p>
+        <p class="mono" style="color:var(--muted); font-size:13px; margin-top:12px;">Written and run by <strong style="color:var(--text);">Nimish Rathi</strong></p>
       </div>
       <a class="btn btn-primary" href="https://www.instagram.com/devops_stuff?stkn=MXR2eGk4MndmdXZwdQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Follow @devops_stuff</a>
     </div>
     <div class="footer-meta">
-      <span>@devops_stuff — DevOps content by Nimish Rathi</span>
+      <span>@devops_stuff - DevOps content by Nimish Rathi</span>
       <span id="year"></span>
     </div>
   </div>
@@ -768,21 +759,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <script>
-  /* =========================================================
-     CONFIG — fill SHEET_CSV_URL with your published Google
-     Sheet CSV link. Leave empty to run on DEMO_CSV instead.
-     Columns, in order: type,category,title,url
-     type must be exactly "carousel" or "video" (lowercase).
-     ========================================================= */
-  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeDZXp_On8dALjS_Yzc3HbfHNSriEyyCq7kNW4vpsFMnz_35t3QKylxZxo9BX8IRsgVVmoDN0KX_65/pub?output=csv";
+  var SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeDZXp_On8dALjS_Yzc3HbfHNSriEyyCq7kNW4vpsFMnz_35t3QKylxZxo9BX8IRsgVVmoDN0KX_65/pub?output=csv";
 
-  const DEMO_CSV = `type,category,title,url
-carousel,LINUX,5 ps flags you actually use,https://instagram.com/devops_stuff
-video,LINUX,Understanding file permissions in 90 seconds,https://instagram.com/devops_stuff
-video,Docker,Bind mounts vs volumes,https://instagram.com/devops_stuff`;
+  var DEMO_CSV = "type,category,title,url\ncarousel,LINUX,5 ps flags you actually use,https://instagram.com/devops_stuff\nvideo,LINUX,Understanding file permissions in 90 seconds,https://instagram.com/devops_stuff\nvideo,Docker,Bind mounts vs volumes,https://instagram.com/devops_stuff";
 
-  /* Cheat sheets are static — not sheet-driven, they change rarely. */
-  const cheatsheets = {
+  var cheatsheets = {
     Linux: {
       description: "Navigation, permissions, processes and the handful of commands that cover 90% of day-to-day Linux work.",
       url: "cheatsheets/linux-complete-cheatsheet.pdf"
@@ -792,27 +773,24 @@ video,Docker,Bind mounts vs volumes,https://instagram.com/devops_stuff`;
       url: "cheatsheets/docker-complete-cheatsheet.pdf"
     },
     Kubernetes: {
-      description: "Pods, services, deployments and the kubectl commands you reach for when something's on fire.",
+      description: "Pods, services, deployments and the kubectl commands you reach for when something is on fire.",
       url: "cheatsheets/kubernetes-complete-cheatsheet.pdf"
     }
   };
 
-  /* ---------------- state ---------------- */
-  let carousels = [];
-  let videos = [];
-  let activeVideoFilter = "All";
-  let activeSheetTab = null;
+  var carousels = [];
+  var videos = [];
+  var activeVideoFilter = "All";
+  var activeSheetTab = null;
 
-  /* ---------------- DOM refs ---------------- */
-  const statusBanner = document.getElementById("statusBanner");
-  const statusBannerText = document.getElementById("statusBannerText");
-  const carouselStrip = document.getElementById("carouselStrip");
-  const filterRow = document.getElementById("filterRow");
-  const videoList = document.getElementById("videoList");
-  const tabRow = document.getElementById("tabRow");
-  const sheetCards = document.getElementById("sheetCards");
+  var statusBanner = document.getElementById("statusBanner");
+  var statusBannerText = document.getElementById("statusBannerText");
+  var carouselStrip = document.getElementById("carouselStrip");
+  var filterRow = document.getElementById("filterRow");
+  var videoList = document.getElementById("videoList");
+  var tabRow = document.getElementById("tabRow");
+  var sheetCards = document.getElementById("sheetCards");
 
-  /* ---------------- helpers ---------------- */
   function setStatus(state, label){
     statusBanner.classList.remove("live", "demo", "error");
     statusBanner.classList.add(state);
@@ -827,65 +805,169 @@ video,Docker,Bind mounts vs volumes,https://instagram.com/devops_stuff`;
       .replace(/"/g, "&quot;");
   }
 
-  /* ---------------- render: carousels ---------------- */
   function renderCarousels(){
-    if (!carousels.length){
-      carouselStrip.innerHTML = `<div class="empty-state">No carousels loaded yet — check back soon.</div>`;
+    if (carousels.length === 0){
+      carouselStrip.innerHTML = "<div class=\"empty-state\">No carousels loaded yet - check back soon.</div>";
       return;
     }
-    carouselStrip.innerHTML = carousels.map(row => `
-      <a class="card" href="${escapeHtml(row.url)}" target="_blank" rel="noopener">
-        <span class="tag">${escapeHtml(row.category)}</span>
-        <span class="title">${escapeHtml(row.title)}</span>
-        <span class="go">View on Instagram &rarr;</span>
-      </a>
-    `).join("");
+    var html = "";
+    for (var i = 0; i < carousels.length; i++){
+      var row = carousels[i];
+      html += "<a class=\"card\" href=\"" + escapeHtml(row.url) + "\" target=\"_blank\" rel=\"noopener\">";
+      html += "<span class=\"tag\">" + escapeHtml(row.category) + "</span>";
+      html += "<span class=\"title\">" + escapeHtml(row.title) + "</span>";
+      html += "<span class=\"go\">View on Instagram -&gt;</span>";
+      html += "</a>";
+    }
+    carouselStrip.innerHTML = html;
   }
 
-  /* ---------------- render: filters + videos ---------------- */
   function renderFilters(){
-    const categories = ["All", ...new Set(videos.map(v => v.category))];
-    filterRow.innerHTML = categories.map(cat => `
-      <button type="button" class="filter-chip${cat === activeVideoFilter ? " active" : ""}" data-cat="${escapeHtml(cat)}">${escapeHtml(cat)}</button>
-    `).join("");
+    var seen = {};
+    var categories = ["All"];
+    for (var i = 0; i < videos.length; i++){
+      var c = videos[i].category;
+      if (!seen[c]){ seen[c] = true; categories.push(c); }
+    }
+    var html = "";
+    for (var j = 0; j < categories.length; j++){
+      var cat = categories[j];
+      var activeClass = (cat === activeVideoFilter) ? " active" : "";
+      html += "<button type=\"button\" class=\"filter-chip" + activeClass + "\" data-cat=\"" + escapeHtml(cat) + "\">" + escapeHtml(cat) + "</button>";
+    }
+    filterRow.innerHTML = html;
 
-    filterRow.querySelectorAll(".filter-chip").forEach(btn => {
-      btn.addEventListener("click", () => {
-        activeVideoFilter = btn.dataset.cat;
+    var chips = filterRow.querySelectorAll(".filter-chip");
+    for (var k = 0; k < chips.length; k++){
+      chips[k].addEventListener("click", function(){
+        activeVideoFilter = this.dataset.cat;
         renderFilters();
         renderVideos(activeVideoFilter);
       });
-    });
+    }
   }
 
   function renderVideos(filter){
-    const list = filter === "All" ? videos : videos.filter(v => v.category === filter);
-    if (!list.length){
-      videoList.innerHTML = `<div class="empty-state">No videos in this category yet.</div>`;
+    var list = [];
+    for (var i = 0; i < videos.length; i++){
+      if (filter === "All" || videos[i].category === filter) list.push(videos[i]);
+    }
+    if (list.length === 0){
+      videoList.innerHTML = "<div class=\"empty-state\">No videos in this category yet.</div>";
       return;
     }
-    videoList.innerHTML = list.map(v => `
-      <a class="video-row" href="${escapeHtml(v.url)}" target="_blank" rel="noopener">
-        <span class="cat mono">${escapeHtml(v.category)}</span>
-        <span class="vtitle">${escapeHtml(v.title)}</span>
-      </a>
-    `).join("");
+    var html = "";
+    for (var j = 0; j < list.length; j++){
+      var v = list[j];
+      html += "<a class=\"video-row\" href=\"" + escapeHtml(v.url) + "\" target=\"_blank\" rel=\"noopener\">";
+      html += "<span class=\"cat mono\">" + escapeHtml(v.category) + "</span>";
+      html += "<span class=\"vtitle\">" + escapeHtml(v.title) + "</span>";
+      html += "</a>";
+    }
+    videoList.innerHTML = html;
   }
 
-  /* ---------------- render: cheat sheets ---------------- */
   function renderCheatsheets(){
-    const topics = Object.keys(cheatsheets);
+    var topics = Object.keys(cheatsheets);
     if (!activeSheetTab) activeSheetTab = topics[0];
 
-    tabRow.innerHTML = topics.map(topic => `
-      <button type="button" class="tab-btn${topic === activeSheetTab ? " active" : ""}" data-topic="${escapeHtml(topic)}">${escapeHtml(topic)}</button>
-    `).join("");
+    var tabHtml = "";
+    for (var i = 0; i < topics.length; i++){
+      var topic = topics[i];
+      var activeClass = (topic === activeSheetTab) ? " active" : "";
+      tabHtml += "<button type=\"button\" class=\"tab-btn" + activeClass + "\" data-topic=\"" + escapeHtml(topic) + "\">" + escapeHtml(topic) + "</button>";
+    }
+    tabRow.innerHTML = tabHtml;
 
-    sheetCards.innerHTML = topics.map(topic => {
-      const sheet = cheatsheets[topic];
-      const action = sheet.url
-        ? `<a class="btn btn-primary" href="${escapeHtml(sheet.url)}" download rel="noopener">Download PDF</a>`
-        : `<span class="badge-soon">Coming soon</span>`;
-      return `
-        <div class="sheet-card${topic === activeSheetTab ? " active" : ""}" data-topic="${escapeHtml(topic)}">
-          <h3>${escapeHtml(topic)} cheat sheet</h3>
+    var cardsHtml = "";
+    for (var j = 0; j < topics.length; j++){
+      var topic2 = topics[j];
+      var sheet = cheatsheets[topic2];
+      var action;
+      if (sheet.url){
+        action = "<a class=\"btn btn-primary\" href=\"" + escapeHtml(sheet.url) + "\" download rel=\"noopener\">Download PDF</a>";
+      } else {
+        action = "<span class=\"badge-soon\">Coming soon</span>";
+      }
+      var activeClass2 = (topic2 === activeSheetTab) ? " active" : "";
+      cardsHtml += "<div class=\"sheet-card" + activeClass2 + "\" data-topic=\"" + escapeHtml(topic2) + "\">";
+      cardsHtml += "<h3>" + escapeHtml(topic2) + " cheat sheet</h3>";
+      cardsHtml += "<p>" + escapeHtml(sheet.description) + "</p>";
+      cardsHtml += action;
+      cardsHtml += "</div>";
+    }
+    sheetCards.innerHTML = cardsHtml;
+
+    var tabs = tabRow.querySelectorAll(".tab-btn");
+    for (var k = 0; k < tabs.length; k++){
+      tabs[k].addEventListener("click", function(){
+        activeSheetTab = this.dataset.topic;
+        renderCheatsheets();
+      });
+    }
+  }
+
+  function initSite(){
+    renderCarousels();
+    renderFilters();
+    renderVideos("All");
+    renderCheatsheets();
+  }
+
+  function splitRows(rows){
+    carousels = [];
+    videos = [];
+    for (var i = 0; i < rows.length; i++){
+      var row = rows[i];
+      var type = (row.type || "").trim().toLowerCase();
+      var entry = {
+        category: (row.category || "").trim(),
+        title: (row.title || "").trim(),
+        url: (row.url || "").trim()
+      };
+      if (!entry.title || !entry.url) continue;
+      if (type === "carousel") carousels.push(entry);
+      else if (type === "video") videos.push(entry);
+    }
+  }
+
+  function loadFromCsv(csvText, sourceIsLive){
+    Papa.parse(csvText, {
+      header: true,
+      skipEmptyLines: true,
+      complete: function(results){
+        splitRows(results.data);
+        initSite();
+        if (sourceIsLive){
+          setStatus("live", "live - pulling from the feed");
+        } else {
+          setStatus("demo", "demo data - no sheet connected");
+        }
+      }
+    });
+  }
+
+  function loadData(){
+    if (!SHEET_CSV_URL){
+      loadFromCsv(DEMO_CSV, false);
+      return;
+    }
+    fetch(SHEET_CSV_URL)
+      .then(function(res){
+        if (!res.ok) throw new Error("Sheet fetch failed: " + res.status);
+        return res.text();
+      })
+      .then(function(text){ loadFromCsv(text, true); })
+      .catch(function(){
+        loadFromCsv(DEMO_CSV, false);
+        setStatus("error", "could not reach the sheet - showing demo data");
+      });
+  }
+
+  document.getElementById("year").textContent = "(c) " + new Date().getFullYear();
+
+  loadData();
+</script>
+
+</body>
+</html>
